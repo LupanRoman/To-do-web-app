@@ -46,59 +46,42 @@ function addTodo(event) {
         todoDiv.style.display = "none";
         todoDiv.classList.toggle("uncompleted");
     };
+    
+    
 };
 
+const filterTodo = document.getElementById("filter-todo");
+
+filterTodo.addEventListener("click", filterTodos);
 
 function filterTodos(e) {
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-     /*const filterTodo = document.getElementById("filter-todo");
-    
-     filterTodo.forEach(function() {
-         switch(e.target.value) {
-             case "completed":
-                 if(todoDiv.classList.contains("completed")) {
-                     todoDiv.style.display = "flex";
-                 } else {
-                     todoDiv.style.display = "none";
-                 }
-         }
-
-     })
-
-
-
-
-
-
-    const abc = listTodo.childNodes;
-
-    abc.forEach(function(todo) {
-
+    const todos = listTodo.childNodes;
+    todos.forEach(function(todo) {
         switch(e.target.value) {
-    
-            case "completed":
-            if(todo.classList.contains("completed")) {
+            case "all":
                 todo.style.display = "flex";
-            } else {
-                todo.style.display = "none";
-            }
-            break;
+                break;
+
+            case "completed":
+                if(todo.classList.contains("completed")) {
+                    todo.style.display = "flex";
+                } else { 
+                    todo.style.display = "none";
+                }
+                break;
+
+            case "uncompleted":
+                if(todo.classList.contains("uncompleted")) {
+                    todo.style.display = "flex";
+                } else {
+                    todo.style.display = "none";
+                };
         };
-    });*/
+    });
 };
+
+
+
 
 
 
