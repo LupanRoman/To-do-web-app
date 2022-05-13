@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #004E99, #75BEB7);
+    background-color: #1E1E1E;
 }
 
 .heading {
@@ -120,6 +120,33 @@ select {
 
 .delete-btn:hover {
     color: #e13433;
+}
+
+@media screen and (max-width: 400px) {
+    
+    .heading {
+        margin-top: 40px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 150px;
+    }
+    
+    .input-todo {
+        width: 300px;
+        height: 30px;
+    }
+
+    .todo-add {
+        margin-top: 10px;
+    }
+
+    .select {
+        margin-top: 10px;
+    }
 }
 
 

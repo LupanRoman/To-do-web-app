@@ -29,6 +29,7 @@ function addTodo(event) {
     // Check if input is empty 
     if (inputItem.value == "") {
         alert("Please add a to do item");
+        
     };
 
     inputItem.value = "";
@@ -79,6 +80,10 @@ function filterTodos(e) {
     });
 
 };
+
+// local storage 
+
+
 
 
 
