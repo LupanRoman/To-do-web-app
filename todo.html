@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do web-app</title>
-    <link rel="stylesheet" href="/todo.css">
-    <link rel="icon" href="/images/square-check-solid.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To do</title>
+    <link rel="stylesheet" href="todo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <h1 class="heading">My to do list</h1>
+    <div class="weather-container">
+        
+    </div>
+
+    <h1 class="heading">My todo list</h1>
 
     <form>
 
         <input class="input-todo" id="todo-item" type="text">
 
-        <button onclick="addTodo(event)" id="todo-add" class="todo-add"><img src="/images/circle-plus-solid.svg" alt=""></button>
+        <button onclick="addTodo(event)" id="todo-add" class="todo-add"><i class="fa-solid fa-square-plus"></i></button>
 
         <div class="select">
             <select name="filter" id="filter-todo">
@@ -30,18 +32,13 @@
             </select>
         </div>
 
-        
-
     </form>
-
-    
-
 
     <div class="todo-container">
         <ul id="todo-list" class="todo-list"></ul>
     </div>
 
+    <script src="todo.js"></script>
 
-    <script src="/todo.js"></script>
 </body>
 </html>

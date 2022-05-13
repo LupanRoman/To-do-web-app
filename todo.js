@@ -1,6 +1,5 @@
 const inputItem = document.getElementById("todo-item");
 const todoAdd = document.getElementById("todo-add");
-
 const listTodo = document.getElementById("todo-list");
 
 
@@ -38,13 +37,13 @@ function addTodo(event) {
     deleteButton.addEventListener("click", deletedTask);
 
     function completedTask() {
-        todoDiv.style.backgroundColor = "rgba(250, 235, 215, 0.568)";
+        todoDiv.style.textDecoration = "line-through";
         todoDiv.classList.toggle("completed");
     };
 
     function deletedTask() {
-        todoDiv.style.display = "none";
-        todoDiv.classList.toggle("uncompleted");
+        //todoDiv.style.display = "none";
+        todoDiv.remove();
     };
     
     
@@ -71,7 +70,7 @@ function filterTodos(e) {
                 break;
 
             case "uncompleted":
-                if(todo.classList.contains("uncompleted")) {
+                if(!todo.classList.contains("completed")) {
                     todo.style.display = "flex";
                 } else {
                     todo.style.display = "none";
